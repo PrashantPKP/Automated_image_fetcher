@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap'); 
+
+*{
+    margin: 0;
+   
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+body{
+    background: url("image/background1.png");
+    background-repeat: no-repeat;
+    background-size: 100vw 80vh;
+    overflow-y: normal;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(252, 250, 212);
+    
+}
+
+/* navbar  */
+.navbar{
+    background-color: rgb(1, 148, 9);
+    width: 100vw;
+    height: 40px;
+    position: fixed; 
+    padding: 10px;
+    display: flex;
+
+}
+.branding{
+    margin-left:5vw;
+    color: white;
+    font-size: 30px;
+    display: flex;
+    flex-direction: row;
+    width: 50vw;
+   
+}
+.branding >a> img{
+    height: 40px;
+    cursor: pointer;
+    
+}
+.branding > p{
+    padding:5px 10px;
+    cursor: pointer;
+
+}
+
+.menu{
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    display: flex;
+    flex-direction: row-reverse;
+    width: 34vw; 
+   
+}
+.menu >a> p{
+    padding:10px 10px;
+    font-size: large;
+    cursor: pointer;
+}
+.menu > img{
+    height: 31px;
+    margin: auto 3px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+
+
+/* main Container */
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    font-family: "Lobster", sans-serif;
+    font-weight: 250;
+    font-style: normal;
+}
+ 
+.container h1{
+    margin: 10px auto;
+    margin-bottom: 30px;
+    font-family: "Oleo Script", sans-serif;
+    font-size: 50px;
+    color:black;
+    text-shadow: 5px 5px white;
+}
+.container p{
+    margin: 10px auto;
+    font-family: "Kanit", sans-serif;
+    font-size: larger;
+}
+.p1{
+    padding: 2px 20vw;
+    color: black;
+}
+
+
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+.search-bar > input[type=text] {
+    padding: 10px;
+    border-radius: 15px 0 0 15px;
+    border: none;
+    height: 30px;
+    width: 500px; 
+}
+
+.search-bar > button {
+   padding: 17px; 
+   background-color: green; 
+   color: white; 
+   border: none; 
+   border-radius: 0 15px 15px 0;
+}
+
+
+/* Advance Option */
+#advancedOptionsButton{
+    background-color:rgb(1, 148, 9) ;
+    height: 34px;
+    color: white;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+
+/* options */
+#options{
+    margin: 0 auto;
+    font-family:  sans-serif;
+    font-size: large;
+    background-color: white;
+    padding:10px 20px;
+    border-radius: 30px;
+    box-shadow: 2px 2px gray;
+}
+#options label{
+    font-weight:100;
+}
+#options label:nth-child(3){
+   margin-left: 30px;
+}
+#options > input,select{
+   padding:5px
+}
+#options > input,select{
+    background-color: rgb(227, 227, 227);
+}
+#options > input:hover,select:hover{
+   background-color: white;
+}
+
+
+/* loading */
+#loading {
+    display: none;
+    position: fixed;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    /* background: rgba(255, 255, 255, 0.7); 
+    padding: 20px; */
+    border-radius: 10px;
+    mix-blend-mode: multiply;
+}
+#loading > img{
+    height: 60px;
+    width: auto;
+}
+#loading > p{
+    font-weight: bold;
+    color: black;
+}
+
+
+
+/* Download Images Button */
+#downloadButton{
+    background-color:rgb(1, 148, 9) ;
+    height: 34px;
+    color: white;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+#downloadButton:disabled{
+
+    color: white;
+    margin-bottom: 20px;
+    visibility: hidden;
+} 
+
+
+/* Feedback Error */
+#feedback{
+    color: red;
+    font-family: "Kanit", sans-serif;
+    margin: 10px;
+    margin-bottom: 40px;
+    font-size: 20px;
+
+}
+
+
+
+
+/* Image Conatainer */
+#imageUrls{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+
+}
+#imageUrls > div{
+    /* Image Container */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: auto;
+    width: 80vw;
+    margin: 30px 20%;
+    background-color: rgba(255, 255, 255,0.6 );
+    /* background-color: red; */
+    padding: 50px;
+}
+
+#imageUrls >div > img{
+    margin: 5px 5px ;
+    height: 200px;
+    width: auto;
+    /* margin-left: 10px; */
+}
+
+
+
+/*  Name Design */
+/* @import url(https://fonts.googleapis.com/css?family=Varela+Round);
+
+
+.container h1{
+  color: hsla(0, 0%, 0%, .9);
+  font: normal 40px Varela Round, sans-serif;
+  height: 60px;
+  margin-top:30px;
+  letter-spacing: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+  animation: move linear 2000ms infinite;  
+}
+
+@keyframes move {
+  0% {
+    text-shadow:
+      4px -4px 0 hsla(0, 100%, 50%, 1), 
+      3px -3px 0 hsla(0, 100%, 50%, 1), 
+      2px -2px 0 hsla(0, 100%, 50%, 1), 
+      1px -1px 0 hsla(0, 100%, 50%, 1),
+      -4px 4px 0 hsla(180, 100%, 50%, 1), 
+      -3px 3px 0 hsla(180, 100%, 50%, 1), 
+      -2px 2px 0 hsla(180, 100%, 50%, 1), 
+      -1px 1px 0 hsla(180, 100%, 50%, 1)
+    ;
+  }
+  25% {    
+    text-shadow:      
+      -4px -4px 0 hsla(180, 100%, 50%, 1), 
+      -3px -3px 0 hsla(180, 100%, 50%, 1), 
+      -2px -2px 0 hsla(180, 100%, 50%, 1), 
+      -1px -1px 0 hsla(180, 100%, 50%, 1),
+      4px 4px 0 hsla(0, 100%, 50%, 1), 
+      3px 3px 0 hsla(0, 100%, 50%, 1), 
+      2px 2px 0 hsla(0, 100%, 50%, 1), 
+      1px 1px 0 hsla(0, 100%, 50%, 1)      
+    ;
+  }
+  50% {
+    text-shadow:
+      -4px 4px 0 hsla(0, 100%, 50%, 1), 
+      -3px 3px 0 hsla(0, 100%, 50%, 1), 
+      -2px 2px 0 hsla(0, 100%, 50%, 1), 
+      -1px 1px 0 hsla(0, 100%, 50%, 1),
+      4px -4px 0 hsla(180, 100%, 50%, 1), 
+      3px -3px 0 hsla(180, 100%, 50%, 1), 
+      2px -2px 0 hsla(180, 100%, 50%, 1), 
+      1px -1px 0 hsla(180, 100%, 50%, 1)
+    ;
+  }
+  75% {
+    text-shadow:
+      4px 4px 0 hsla(180, 100%, 50%, 1), 
+      3px 3px 0 hsla(180, 100%, 50%, 1), 
+      2px 2px 0 hsla(180, 100%, 50%, 1), 
+      1px 1px 0 hsla(180, 100%, 50%, 1),
+      -4px -4px 0 hsla(0, 100%, 50%, 1), 
+      -3px -3px 0 hsla(0, 100%, 50%, 1), 
+      -2px -2px 0 hsla(0, 100%, 50%, 1), 
+      -1px -1px 0 hsla(0, 100%, 50%, 1)      
+    ;
+  }
+  100% {
+    text-shadow:
+      4px -4px 0 hsla(0, 100%, 50%, 1), 
+      3px -3px 0 hsla(0, 100%, 50%, 1), 
+      2px -2px 0 hsla(0, 100%, 50%, 1), 
+      1px -1px 0 hsla(0, 100%, 50%, 1),
+      -4px 4px 0 hsla(180, 100%, 50%, 1), 
+      -3px 3px 0 hsla(180, 100%, 50%, 1), 
+      -2px 2px 0 hsla(180, 100%, 50%, 1), 
+      -1px 1px 0 hsla(180, 100%, 50%, 1)
+    ;
+  }  
+} */
