@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oleo+Script:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+
+/* Contact Form */
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group label {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+#contactForm button {
+    padding: 15px 30px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#contactForm button:hover {
+    background-color: rgb(1, 148, 9);
+}
+
+/* Features List */
+.features-list {
+    list-style-type: none;
+    padding: 0;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.features-list li {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.left-div {
+    text-align: left;
+}
+
+.features-list li strong {
+    font-size: 22px;
+    color: #000;
+    text-align: left;
+}
+
+.features-list li p {
+    margin: 0;
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    text-align: justify;
+}
+
+.features-list li .content {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.features-list li img {
+    width: 40%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin: 0;
+}
+.empty{
+    height: 6vw;
+}
+
+
+/* Progress Bar Styles */
+#progressContainer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#downloadProgress {
+    width: 80%;
+    height: 20px;
+    border-radius: 10px;
+    background-color: #f3f3f3;
+    overflow: hidden;
+}
+
+#downloadProgress::-webkit-progress-bar {
+    background-color: #f3f3f3;
+    border-radius: 10px;
+}
+
+#downloadProgress::-webkit-progress-value {
+    background-color: rgb(1, 148, 9);
+    border-radius: 10px;
+}
+
+#downloadProgress::-moz-progress-bar {
+    background-color: rgb(1, 148, 9);
+    border-radius: 10px;
+}
+
+#progressText {
+    display: block;
+    margin-top: 10px;
+    font-size: 16px;
+    color: black;
+}
+
+
+/* Responsiveness for Tablet (Max-width: 768px) */
+@media (max-width: 768px) {
+    .features-list {
+        max-width: 90%;
+    }
+
+    .features-list li img {
+        max-width: 250px;
+    }
+
+    .features-list li {
+        padding: 15px;
+    }
+
+    .features-list li p {
+        font-size: 14px;
+    }
+
+    .features-list li strong {
+        font-size: 18px;
+    }
+}
+
+/* Responsiveness for Smartphone (Max-width: 480px) */
+@media (max-width: 480px) {
+    #contactForm {
+        max-width: 90%;
+    }
+
+    .features-list {
+        max-width: 90%;
+    }
+
+    .features-list li img {
+        max-width: 200px;
+    }
+
+    .features-list li {
+        padding: 10px;
+        margin: 15px 0;
+        flex-direction: column;
+    }
+
+    .features-list li p {
+        font-size: 12px;
+    }
+
+    .features-list li strong {
+        font-size: 16px;
+    }
+
+    .features-list li .content {
+        flex-direction: column;
+    }
+
+    .features-list li img {
+        width: 100%;
+        max-width: none;
+    }
+}
