@@ -1,20 +1,35 @@
+import os
 import json
 import requests
-import os
 import logging
 
 logging.basicConfig(level=logging.DEBUG)
 
-# Load API key from environment variable
-api_key = os.environ.get("SERPAPI_KEY")
+# Load API keys from environment variables
+SERPAPI_KEYS = [
+    os.environ.get("SERPAPI_KEY1"),
+    os.environ.get("SERPAPI_KEY2"),
+    os.environ.get("SERPAPI_KEY3"),
+    os.environ.get("SERPAPI_KEY4")
+]
 
+# Ensure no key is missing
+if not all(SERPAPI_KEYS):
+    raise ValueError("One or more SERPAPI_KEY environment variables are missing.")
 
-# api_key = os.environ.get("SERPAPI_KEY")
-if not api_key:
-    raise ValueError("SERPAPI_KEY environment variable not set.")
+# Index tracker for round-robin usage
+api_key_index = 0
+
+def get_next_api_key():
+    global api_key_index
+    key = SERPAPI_KEYS[api_key_index]
+    api_key_index = (api_key_index + 1) % len(SERPAPI_KEYS)
+    return key
 
 def scrape_google_images(query, num_images=50):
     search_url = "https://serpapi.com/search.json"
+    api_key = get_next_api_key()
+
     params = {
         "q": query,
         "tbm": "isch",
@@ -23,7 +38,7 @@ def scrape_google_images(query, num_images=50):
     }
 
     try:
-        response = requests.get(search_url, params=params, timeout=10)
+        response = requests.get(search_url, params=params, timeout=30)
         response.raise_for_status()
         search_results = response.json()
 
